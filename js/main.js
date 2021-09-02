@@ -134,16 +134,9 @@ icons.forEach((element) => {
 
 // AL CAMBIO DI SELEZIONE MOSTRARE LE ICONE FILTRATE - ANDARE A LEGGERE METODO ONCHANGE
 select.onchange = function(element) {
-    console.log(element.target.value);
-    const filtered = filteredValue(icons, element.target.value);
-    console.log(filtered);
-
+    const filtered = filteredValue(coloredArray, element.target.value);
     print(filtered, cardContainer);
 };
-
-console.log(getTypes(icons));
-
-// const coloredArray = colorIcons(icons, colors);
 
 //FUNZIONI
 // print(icons, cardContainer);  INVOCAZIONE FUNZIONE
@@ -153,11 +146,11 @@ function print(array, container) {
     container.innerHTML = ' ';
 
     array.forEach((element) => {
-        const { name, prefix, family, type} = element;
+        const { name, prefix, family, type, color} = element;
         container.innerHTML += `
         <div class="card">
             <div class="symbol">
-                <i class="${family} ${prefix}${name}"></i>
+                <i class="${family} ${prefix}${name}" style:"${color}"></i>
             </div>
             <div class="text">
                 ${name.toUpperCase()}
@@ -171,7 +164,6 @@ function print(array, container) {
 function getTypes(array) {
     const types = [];
     array.forEach((element) => {
-        console.log(element.type);
         if (types.includes(element.type) == false) {
             types.push(element.type);
         }
@@ -185,7 +177,6 @@ function colorIcons(array, colors) {
 
     const coloredArray = array.map((element) => { //aggiungo la prorietà color agli elementi tramite metodo map
         const indexType = types.indexOf(element.type);
-        console.log(indexType);
 
         element.color = colors[indexType];
         return element;
@@ -196,7 +187,6 @@ function colorIcons(array, colors) {
 // FUNZIONE PER SCRIVERE IN HTML LE OPZIONI NEL TAG SELECT IN BASE AL TYPE DELL'ELEMENTO
 function printOption(array, select) {
     array.forEach((element) => {
-        console.log(element);
         select.innerHTML += `<option value="${element}">${element}</option>`
     });
 };
