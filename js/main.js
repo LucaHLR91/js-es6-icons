@@ -1,5 +1,5 @@
 //CONSEGNA: stampare a video tutti gli elementi nella pagina html
-//Icons array
+//Array icone
 const icons = [
     {
       name: 'cat',
@@ -98,7 +98,7 @@ const icons = [
       family: 'fas',
     },
 ];
-//End icons array
+//Fine array icone
 
 // STAMPARE TRAMITE CICLO FOREACH A VIDEO
 
