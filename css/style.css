@@ -30,10 +30,22 @@ header {
     font-weight: 400;
 }
 
+/* SECTION */
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(41, 177, 221);
+}
+
 /* MAIN */
 main {
     background-color: rgb(221, 221, 221);
-    height: calc(100% - 200px);
+    height: calc(100% - 270px);
 }
 
 #card_container {
