@@ -25,6 +25,7 @@ header {
 
 #page_title .title {
     color: rgb(41, 177, 221);
+    font-family: 'Acme', sans-serif;
     font-size: 50px;
     font-weight: 400;
 }

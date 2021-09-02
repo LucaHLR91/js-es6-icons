@@ -109,7 +109,7 @@ icons.forEach((element) => {
     cardContainer.innerHTML += `
     <div class="card">
         <div class="symbol">
-            <i class="${family} ${prefix}${name}" style="color: blue;"></i>
+            <i class="${family} ${prefix}${name}"></i>
         </div>
         <div class="text">
             ${name.toUpperCase()}
