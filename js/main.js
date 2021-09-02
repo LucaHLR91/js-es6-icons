@@ -134,7 +134,7 @@ icons.forEach((element) => {
 
 // AL CAMBIO DI SELEZIONE MOSTRARE LE ICONE FILTRATE - ANDARE A LEGGERE METODO ONCHANGE
 select.onchange = function(element) {
-    console.log(element.targert.value);
+    console.log(element.target.value);
     const filtered = filteredValue(icons, element.target.value);
     console.log(filtered);
 
@@ -150,6 +150,8 @@ console.log(getTypes(icons));
 
 // FUNZIONE PER FARE ESATTAMENTE LO STESSO FATTO SOPRA, SOLO CON LA POSSIBILITA DI RIUTILIZZARLA
 function print(array, container) {
+    container.innerHTML = ' ';
+
     array.forEach((element) => {
         const { name, prefix, family, type} = element;
         container.innerHTML += `
@@ -175,7 +177,7 @@ function getTypes(array) {
         }
     });
     return types;
-}ò
+};
 
 // FUNZIONE PER COLORARE LE ICONE IN BASE AL TYPE DELL'ELEMENTO - AGGIUNTA PROPRIETA COLOR AGLI ELEMENTI DELL'ARRAY
 function colorIcons(array, colors) {
