@@ -175,13 +175,13 @@ function getTypes(array) {
         }
     });
     return types;
-}
+}ò
 
-// FUNZIONE PER COLORARE LE ICONE IN BASE AL TYPE DELL'ELEMENTO
+// FUNZIONE PER COLORARE LE ICONE IN BASE AL TYPE DELL'ELEMENTO - AGGIUNTA PROPRIETA COLOR AGLI ELEMENTI DELL'ARRAY
 function colorIcons(array, colors) {
     const types = getTypes(array);
 
-    const coloredArray = array.map((element) => {
+    const coloredArray = array.map((element) => { //aggiungo la prorietà color agli elementi tramite metodo map
         const indexType = types.indexOf(element.type);
         console.log(indexType);
 
