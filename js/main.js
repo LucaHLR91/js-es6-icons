@@ -97,7 +97,7 @@ const icons = [
       type: 'user',
       family: 'fas',
     },
-  ];
+];
 //End icons array
 
 // STAMPARE TRAMITE CICLO FOREACH A VIDEO
@@ -105,15 +105,34 @@ const icons = [
 const cardContainer = document.getElementById('card_container');
 
 icons.forEach((element) => {
-    const { name, prefix, family} = element;
+    const { name, prefix, family, type} = element;
     cardContainer.innerHTML += `
     <div class="card">
         <div class="symbol">
             <i class="${family} ${prefix}${name}" style="color: blue;"></i>
         </div>
         <div class="text">
-            ${name}
+            ${name.toUpperCase()}
         </div>
     </div>
     `
 });
+
+//FUNZIONI
+// print(icons, cardContainer);  INVOCAZIONE FUNZIONE
+
+// FUNZIONE PER FARE ESATTAMENTE LO STESSO FATTO SOPRA, SOLO CON LA POSSIBILITA DI RIUTILIZZARLA
+// function print(array, container) {
+//     const { name, prefix, family, type} = element;
+//     cardContainer.innerHTML += `
+//     <div class="card">
+//         <div class="symbol">
+//             <i class="${family} ${prefix}${name}" style="color: blue;"></i>
+//         </div>
+//         <div class="text">
+//             ${name.toUpperCase()}
+//         </div>
+//     </div>
+//     `
+// };
+
