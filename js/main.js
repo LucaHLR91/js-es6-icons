@@ -124,7 +124,7 @@ icons.forEach((element) => {
 // FUNZIONE PER FARE ESATTAMENTE LO STESSO FATTO SOPRA, SOLO CON LA POSSIBILITA DI RIUTILIZZARLA
 // function print(array, container) {
 //     const { name, prefix, family, type} = element;
-//     cardContainer.innerHTML += `
+//     container.innerHTML += `
 //     <div class="card">
 //         <div class="symbol">
 //             <i class="${family} ${prefix}${name}" style="color: blue;"></i>
