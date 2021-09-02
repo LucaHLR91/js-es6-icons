@@ -123,16 +123,19 @@ icons.forEach((element) => {
 
 // FUNZIONE PER FARE ESATTAMENTE LO STESSO FATTO SOPRA, SOLO CON LA POSSIBILITA DI RIUTILIZZARLA
 // function print(array, container) {
-//     const { name, prefix, family, type} = element;
-//     container.innerHTML += `
-//     <div class="card">
-//         <div class="symbol">
-//             <i class="${family} ${prefix}${name}" style="color: blue;"></i>
+//     array.forEach((element) => {
+//         const { name, prefix, family, type} = element;
+//         container.innerHTML += `
+//         <div class="card">
+//             <div class="symbol">
+//                 <i class="${family} ${prefix}${name}"></i>
+//             </div>
+//             <div class="text">
+//                 ${name.toUpperCase()}
+//             </div>
 //         </div>
-//         <div class="text">
-//             ${name.toUpperCase()}
-//         </div>
-//     </div>
-//     `
+//         `
+//     });
 // };
+
 
