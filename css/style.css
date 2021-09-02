@@ -42,6 +42,12 @@ header {
     background-color: rgb(41, 177, 221);
 }
 
+.search select {
+    margin: 0 10px;
+    background-color: white;
+    border: none;
+}
+
 /* MAIN */
 main {
     background-color: rgb(221, 221, 221);
@@ -58,7 +64,7 @@ main {
 }
 
 .card {
-    width: calc(100% / 4);
+    width: calc((100% / 4) - 40px);
     background-color: rgb(245, 245, 245);
     margin: 20px;
     padding: 20px;
@@ -67,6 +73,14 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.symbol i {
+    font-size: 30px;
+}
+
+.card .text {
+    font-size: 20px;
 }
 
 /* FOOTER */

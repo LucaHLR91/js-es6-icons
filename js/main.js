@@ -134,6 +134,7 @@ icons.forEach((element) => {
 
 // AL CAMBIO DI SELEZIONE MOSTRARE LE ICONE FILTRATE - ANDARE A LEGGERE METODO ONCHANGE
 select.onchange = function(element) {
+    console.log(coloredArray);
     const filtered = filteredValue(coloredArray, element.target.value);
     print(filtered, cardContainer);
 };
@@ -150,7 +151,7 @@ function print(array, container) {
         container.innerHTML += `
         <div class="card">
             <div class="symbol">
-                <i class="${family} ${prefix}${name}" style:"${color}"></i>
+                <i class="${family} ${prefix}${name}" style="color: ${color}"></i>
             </div>
             <div class="text">
                 ${name.toUpperCase()}
@@ -204,6 +205,6 @@ function filteredValue(array, type) {
     if(type === "") {
         return array;
     };
-
+    console.log(filteredIcons);
     return filteredIcons;
 };
